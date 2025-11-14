@@ -1,0 +1,8 @@
+---
+- name: make wg-easy directory
+  ansible.builtin.file:
+    path: ~/wg-easy
+    state: directory
+
+- name: deploy wg-easy container
+

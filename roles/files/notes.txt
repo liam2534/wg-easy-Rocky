@@ -1,0 +1,7 @@
+The long file name is because I googled: "how to make podman container run after restart" which
+led to this command: podman generate systemd --new --files wg-easy
+
+this did not work
+
+To make a new hash: podman run -it ghcr.io/wg-easy/wg-easy wgpw YOUR_PASSWORD_HERE
+To run this command, you need to install both "podman" and "podman-compose"

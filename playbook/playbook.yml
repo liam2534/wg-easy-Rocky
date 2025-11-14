@@ -1,0 +1,6 @@
+---
+- name: deploy-wg
+  hosts: wg-server 
+  remote_user: liam
+
+ 
