@@ -1,8 +1,22 @@
 ---
+- name: update system
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+    
 - name: make wg-easy directory
   ansible.builtin.file:
     path: ~/wg-easy
     state: directory
 
-- name: deploy wg-easy container
+- name: insert docker-compose.yml
+  ansible.builtin.template:
+    src: docker-compose.yml.j2
+    dest: ~/wg-easy/docker-compose.yml
+    mode: '0600'
 
+- name: copy notes.txt
+  ansible.builtin.copy:
+    src: notes.txt
+    dest: ~/wg-easy/notes.txt
+    mode: '0644'
